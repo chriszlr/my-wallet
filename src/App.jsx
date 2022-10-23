@@ -3,6 +3,8 @@ import {ethers} from "ethers"
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 
+
+
 export const AppState = createContext()
 
 const { ethereum } = window
@@ -13,6 +15,8 @@ function App() {
   const [currentAccount, setcurrentAccount] = useState("")
   const [balance, setbalance] = useState("")
   const [chain, setchain] = useState("")
+
+
   
   
   useEffect(() => {
@@ -97,8 +101,8 @@ function App() {
       <AppState.Provider value={{connected, setconnected, currentAccount, setcurrentAccount, cWallet, accountBalance, balance, setbalance, chainId, chain, setchain, changeToMainnet, changeToGoerli}}>
         {!connected ? <Navbar /> : (
           <div>
-          <Navbar/>
-          <Main />
+            <Navbar/>
+            <Main />
           </div>
         )}
       </AppState.Provider>

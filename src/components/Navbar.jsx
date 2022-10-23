@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { AppState } from '../App'
 
+
 const Navbar = () => {
 
   const App = useContext(AppState)
@@ -11,6 +12,7 @@ const Navbar = () => {
           <h3 className="text-3xl font-semibold">Wallet.</h3>
         </div>
 
+        <button onClick={() => App.setroute("eth-transfer")} className='font-bold font-lg bg-[#2E70FC] bg-opacity-70 py-3 px-5 rounded-full'>Transfer ETH</button>
 
         {!App.connected ? (
            <div>
