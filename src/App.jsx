@@ -16,6 +16,8 @@ function App() {
   const [balance, setbalance] = useState("")
   const [chain, setchain] = useState("")
 
+  const [route, setroute] = useState("wallet")
+
 
   
   
@@ -98,7 +100,7 @@ function App() {
 
   return (
     <div className="w-screen h-screen bg-gradient-to-r from-[#111860] via-indigo-500 to-cyan-600">
-      <AppState.Provider value={{connected, setconnected, currentAccount, setcurrentAccount, cWallet, accountBalance, balance, setbalance, chainId, chain, setchain, changeToMainnet, changeToGoerli}}>
+      <AppState.Provider value={{connected, setconnected, currentAccount, setcurrentAccount, cWallet, accountBalance, balance, setbalance, chainId, chain, setchain, changeToMainnet, changeToGoerli, route, setroute}}>
         {!connected ? <Navbar /> : (
           <div>
             <Navbar/>
